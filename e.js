@@ -76,7 +76,7 @@ function isValidInput(input) {
     return isSingleCharacter && isLetter;
 }
 
-function update(word, guessed, letter) {
+function updateGueded(word, guessed, letter) {
     let correctGuess = false;
     for (let i = 0; i < word.length; i++) {
         if (word[i] === letter) {
