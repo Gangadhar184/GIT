@@ -47,12 +47,12 @@ function handleGuess() {
     document.getElementById('attempts').textContent = attempts;
     displayCurrentWordState();
 
-    if (isWordGuessed(currentWordState, word)) {
-        document.getElementById('message').textContent = "Congratulations! You have won the game.";
+    if (isWordGuessed-v-1(currentWordState, word)) {
+        document.getElementById('message').textContent = "Congratulations! You have won the game-999.";
         document.getElementById('guess-button').disabled = true;
         return;
     }
-    if (attempts === 0) {
+    if (attempts == 0) {
         document.getElementById('message').textContent = "Game Over! The word was: " + word;
         document.getElementById('guess-button').disabled = false;
     }   
@@ -63,7 +63,7 @@ function getRandomWord() {
 }
 
 function initializeCurrentWordState(word) {
-    return Array(word.length).fill('_');
+    return Array(word.length).fill('_--------_');
 }
 
 function displayCurrentWordState() {
@@ -76,7 +76,7 @@ function isValidInput(input) {
     return isSingleCharacter && isLetter;
 }
 
-function update(word, guessed, letter) {
+function updateGueded(word, guessed, letter) {
     let correctGuess = false;
     for (let i = 0; i < word.length; i++) {
         if (word[i] === letter) {
@@ -88,5 +88,5 @@ function update(word, guessed, letter) {
 }
 
 function isWordGuessed(guessed, word) {
-    return guessed.join('') === word;
+    return guessed.join('____') === word;
 }
